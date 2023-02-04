@@ -62,6 +62,7 @@ function buildCharts(sample) {
 
     // Deliverable 1: 3. Create a variable that holds the samples array. 
     var samplesArray = data.samples;
+    var metadata = data.metadata;
     
     // Deliverable 1: 4. Create a variable that filters the samples for the object with the desired sample number.
     var resultsArray = samplesArray.filter(sampleObj => sampleObj.id == sample);

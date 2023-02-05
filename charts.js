@@ -116,7 +116,7 @@ function buildCharts(sample) {
         marker: {
           size: [sampleValues]
         }
-      };
+      }
 
     ]
 

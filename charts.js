@@ -117,8 +117,16 @@ function buildCharts(sample) {
         }
     };
 
-
     // Deliverable 2: 2. Create the layout for the bubble chart.
+    var layout = {
+      title: 'Belly Button Bacteria',
+      showlegend: false,
+      height: 600,
+      width: 600
+    };
+    
+    Plotly.newPlot('bubble', [bubbleData], layout);
+
 
     // Deliverable 2: 3. Use Plotly to plot the data with the layout.
     

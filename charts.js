@@ -95,7 +95,7 @@ function buildCharts(sample) {
       y: yticks,
       type: "bar", 
       orientation: 'h',
-      text: otuLabels
+      text: resultsArray[0].otu_labels
     };
 
     // Deliverable 1: 9. Create the layout for the bar chart. 

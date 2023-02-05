@@ -115,7 +115,7 @@ function buildCharts(sample) {
         marker: {
           size: [sampleValues]
         }
-      };
+    };
 
 
     // Deliverable 2: 2. Create the layout for the bubble chart.

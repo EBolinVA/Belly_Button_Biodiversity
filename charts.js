@@ -94,7 +94,6 @@ function buildCharts(sample) {
       x: sampleValues.slice(0, 10).reverse(),
       y: yticks,
       type: "bar", 
-      orientation: 'h',
       text: resultsArray[0].otu_labels
     };
 

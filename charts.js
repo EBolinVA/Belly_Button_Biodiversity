@@ -112,17 +112,22 @@ function buildCharts(sample) {
         x: otuIds,
         y: sampleValues,
         text: [otuLabels],
+        mode: 'markers',
         marker: {
           size: [sampleValues]
-        }
+        },
+        color: otuIds
     };
 
     // Deliverable 2: 2. Create the layout for the bubble chart.
     var layout = {
       title: 'Belly Button Bacteria',
+      xaxis: {title: "OTU ID"},
       showlegend: false,
+      hovermode: 'closest',
+      text: [otuLabels],
       height: 600,
-      width: 600
+      width: 1200
     };
     
     Plotly.newPlot('bubble', [bubbleData], layout);

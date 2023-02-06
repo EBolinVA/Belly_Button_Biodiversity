@@ -123,20 +123,22 @@ function buildCharts(sample) {
 
     // Deliverable 2: 2. Create the layout for the bubble chart.
     var bubbleDatalayout = {
+      hovermode: 'closest',
       title: 'Belly Button Bacteria',
       xaxis: {title: "OTU ID"},
       margin: { t: 50 }
+      
     };
-    
-  
-
 
   // Deliverable 2: 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot('bubble', bubbleData, bubbleDatalayout);
 
-
     // Deliverable 3: 4. Create the trace for the gauge chart.
-    
+    var gaugeData = [{
+      type: "indicator",
+
+    }]
+
     // Deliverable 3: 5. Create the layout for the gauge chart.
 
     // Deliverable 3: 6. Use Plotly to plot the gauge data and layout.

@@ -109,28 +109,23 @@ function buildCharts(sample) {
     Plotly.newPlot('bar', barData, barLayout)
    
     // Deliverable 2: 1. Create the trace for the bubble chart.
-    var trace1 = {
-        x: [otuIds],
-        y: [sampleValues],
-        text: [otuLabels],
+    var bubbleData = [{
+        x: otuIds,
+        y: sampleValues,
+        text: otuLabels,
         mode: 'markers',
         marker: {
-          size: [sampleValues]
+          color: otuIds,
+          size: sampleValues,
+          colorscale: "Blues",
         },
-        color: otuIds
-    };
-
-    var bubbleData = [trace1];
+     }];
 
     // Deliverable 2: 2. Create the layout for the bubble chart.
-    var layout = {
+    var bubbleDatalayout = {
       title: 'Belly Button Bacteria',
       xaxis: {title: "OTU ID"},
-      showlegend: false,
-      hovermode: 'closest',
-      text: [otuLabels],
-      height: 600,
-      width: 600
+      margin: { t: 50 }
     };
     
   

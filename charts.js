@@ -82,7 +82,8 @@ function buildCharts(sample) {
     var sampleValues = resultsArray[0].sample_values;
 
     // Deliverable 3: 3. Create a variable that holds the washing frequency.
-    // var washFreq = metadataArray[0].wfreq;
+    var washFreq = metadataArray[0].wfreq;
+    var washFreqFloat = parseFloat(washFreq).toFixed(2);
 
     // Deliverable 1: 7. Create the yticks for the bar chart.
     // Hint: Get the the top 10 otu_ids and map them in descending order 
@@ -136,12 +137,37 @@ function buildCharts(sample) {
     // Deliverable 3: 4. Create the trace for the gauge chart.
     var gaugeData = [{
       type: "indicator",
-
-    }]
+      mode: "gauge+number",
+      value: washFreqFloat,
+      title: {
+        text: "<b>Belly Button Washing Frequency</b> <br>Scrubs per Week</br>",
+        font: {size: 24} 
+      }
+      gauge: {
+        axis: {
+          range: [0, 10]
+        },
+        bar: {color: "black"},
+        bgcolor: "white",
+        borderwidth: 2,
+        bordercolor: "gray",
+        steps: [
+          {range: [0,2], color: "red"},
+          {range: [2,4], color: "orange"},
+          {range: [4,6], color: "yellow"},
+          {range: [6,8], color: "lightgreen"},
+          {range: [8,10], color: "green"}
+        ]
+      }
+    }];
 
     // Deliverable 3: 5. Create the layout for the gauge chart.
-
+    var gaugeLayout = {
+      margin: {t: 20, b: 20, l: 20, r: 20, },
+      width: 500,
+      height: 425
+    };
     // Deliverable 3: 6. Use Plotly to plot the gauge data and layout.
-
+    Plotly.newPlot("gauge", gaugeData, gaugeLayout);
   });
 }

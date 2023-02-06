@@ -141,8 +141,7 @@ function buildCharts(sample) {
       value: washFreqFloat,
       title: {
         text: "<b>Belly Button Washing Frequency</b> <br>Scrubs per Week</br>",
-        font: {size: 24} 
-      }
+        font: {size: 24} },
       gauge: {
         axis: {
           range: [0, 10]

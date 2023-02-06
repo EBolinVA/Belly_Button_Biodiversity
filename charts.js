@@ -121,7 +121,7 @@ function buildCharts(sample) {
     };
 
     var bubbleData = [trace1];
-    
+
     // Deliverable 2: 2. Create the layout for the bubble chart.
     var layout = {
       title: 'Belly Button Bacteria',
@@ -130,14 +130,16 @@ function buildCharts(sample) {
       hovermode: 'closest',
       text: [otuLabels],
       height: 600,
-      width: 1200
+      width: 600
     };
     
-    Plotly.newPlot('bubble', bubbleData, layout);
+  
 
 
     // Deliverable 2: 3. Use Plotly to plot the data with the layout.
-    
+    Plotly.newPlot('bubble', bubbleData, layout);
+
+
     // Deliverable 3: 4. Create the trace for the gauge chart.
     
     // Deliverable 3: 5. Create the layout for the gauge chart.

@@ -103,7 +103,16 @@ function buildCharts(sample) {
 
     // Deliverable 1: 9. Create the layout for the bar chart. 
     var barLayout = {
-      title: "Top Ten Bacteria Cultures Found in Belly Buttons" 
+      title: "Top Ten Bacteria Cultures Found",
+      font: {
+        family: 'Lato',
+        size: 16, 
+        color: 'rgb(100,150,200)'
+      },
+      plot_bgcolor: 'rgba(200,255,0,0.1)',
+      margin: {
+        pad: 10
+      },
     };
 
     // Deliverable 1: 10. Use Plotly to plot the data with the layout. 
